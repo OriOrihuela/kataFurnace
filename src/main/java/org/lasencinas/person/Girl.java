@@ -5,7 +5,6 @@ import org.lasencinas.interfaces.Heatable;
 public class Girl implements Heatable {
 
     /* ---- Behaviours ---- */
-
     @Override
     public void disengage() {
 

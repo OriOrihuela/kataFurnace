@@ -9,4 +9,9 @@ public class Man implements Temperable {
     public void read() {
 
     }
+
+    public void speak() {
+        System.out.println("The man says: " + '\n' +
+                "   Let's do it!" + '\n');
+    }
 }

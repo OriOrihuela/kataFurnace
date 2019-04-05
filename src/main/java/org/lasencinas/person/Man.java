@@ -1,8 +1,8 @@
-package org.lasencinas.items;
+package org.lasencinas.person;
 
 import org.lasencinas.interfaces.Temperable;
 
-public class Pyrometer implements Temperable {
+public class Man implements Temperable {
 
     /* ---- Behaviours ---- */
     @Override

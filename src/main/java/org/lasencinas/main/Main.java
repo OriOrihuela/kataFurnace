@@ -16,6 +16,10 @@ public class Main {
         final double maxTemp = 21.0;
 
         RoomTemperature temperature = RoomTemperature.setRoomTemperature(15);
+        /* If we try to create another RoomTemperature instance, a message will be displayed alerting us it will not
+           be possible
+         */
+
         Heatable heater = new Heater();
         Temperable thermometer = new Thermometer();
 

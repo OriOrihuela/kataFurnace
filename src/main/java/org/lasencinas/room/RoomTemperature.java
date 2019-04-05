@@ -2,25 +2,30 @@ package org.lasencinas.room;
 
 public class RoomTemperature {
     /* ---- Properties of the class ---- */
-    private final RoomTemperature INSTANCE = new RoomTemperature();
-    private double temperature = 0d;
+    private static RoomTemperature ROOM_TEMPERATURE;
+    private double temperature;
 
 
     /* ---- Constructor ---- */
-    public RoomTemperature() {
-    }
-
-    public RoomTemperature(double temperature) {
+    private RoomTemperature(double temperature) {
         this.temperature = temperature;
     }
 
 
     /* ---- Getters ---- */
-    public RoomTemperature getInstance() {
-        return INSTANCE;
-    }
-
     public double getTemperature() {
         return temperature;
+    }
+
+
+    /* ---- Behaviours ---- */
+    public static RoomTemperature getRoomTemperature(double temperature) {
+        if (ROOM_TEMPERATURE == null) {
+            ROOM_TEMPERATURE = new RoomTemperature(temperature);
+        }
+        else {
+            System.out.println("Cannot create another RoomTemperature object!");
+        }
+        return ROOM_TEMPERATURE;
     }
 }

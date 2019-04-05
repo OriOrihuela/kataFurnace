@@ -3,6 +3,7 @@ package org.lasencinas.main;
 
 import org.lasencinas.interfaces.Heatable;
 import org.lasencinas.interfaces.Temperable;
+import org.lasencinas.person.Man;
 import org.lasencinas.person.Girl;
 import org.lasencinas.items.Heater;
 import org.lasencinas.items.Regulator;
@@ -14,18 +15,21 @@ public class Main {
         final double minTemp = 15.0;
         final double maxTemp = 21.0;
 
-        RoomTemperature temperature = new RoomTemperature(15);
+        RoomTemperature temperature = RoomTemperature.getRoomTemperature(15);
         Heatable heater = new Heater();
         Temperable thermometer = new Thermometer();
 
         Regulator regulator = new Regulator();
 
-        System.out.println("Arrancando...");
+        System.out.println("Precalentando...\n");
         regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
 
+        System.out.println("¡Ignición!");
+
+        Man man = new Man();
         Girl moza = new Girl();
-        System.out.println("\nArrancando a la moza: ");
-        regulator.regulate(thermometer, moza, minTemp, maxTemp, temperature);
+        System.out.println("\nEjecución finalizada: ");
+        regulator.regulate(man, moza, minTemp, maxTemp, temperature);
         moza.speak();
     }
 }

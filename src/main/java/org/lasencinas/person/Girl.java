@@ -16,6 +16,7 @@ public class Girl implements Heatable {
     }
 
     public void speak() {
-        System.out.println("Oh my gosh!");
+        System.out.println("The girl says: " + '\n' +
+                "   Oh my gosh!");
     }
 }

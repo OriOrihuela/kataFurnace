@@ -1,6 +1,7 @@
 package org.lasencinas.room;
 
 public class RoomTemperature {
+
     /* ---- Properties of the class ---- */
     private static RoomTemperature ROOM_TEMPERATURE;
     private double temperature;
@@ -19,11 +20,10 @@ public class RoomTemperature {
 
 
     /* ---- Behaviours ---- */
-    public static RoomTemperature getRoomTemperature(double temperature) {
+    public static RoomTemperature setRoomTemperature(double temperature) {
         if (ROOM_TEMPERATURE == null) {
             ROOM_TEMPERATURE = new RoomTemperature(temperature);
-        }
-        else {
+        } else {
             System.out.println("Cannot create another RoomTemperature object!");
         }
         return ROOM_TEMPERATURE;

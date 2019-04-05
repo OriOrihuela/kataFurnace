@@ -28,4 +28,12 @@ public class RoomTemperature {
         }
         return ROOM_TEMPERATURE;
     }
+
+    public void addGrades(double grade) {
+        this.temperature += grade;
+    }
+
+    public void subtractGrades(double grades) {
+        this.temperature -= grades;
+    }
 }

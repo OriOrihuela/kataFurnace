@@ -19,23 +19,26 @@ public class Main {
         /* If we try to create another RoomTemperature instance, a message will be displayed alerting us it will not
            be possible
          */
+        System.out.println(temperature.getTemperature());
 
         Heatable heater = new Heater();
         Temperable thermometer = new Thermometer();
 
         Regulator regulator = new Regulator();
-
-        System.out.println("Precalentando...\n");
-        System.out.println(temperature.getTemperature());
         regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
 
-        System.out.println("¡Ignición!");
-
-        Man man = new Man();
+        Man gañán = new Man();
         Girl moza = new Girl();
 
-        System.out.println("\nEjecución finalizada: ");
-        regulator.regulate(man, moza, minTemp, maxTemp, temperature);
+        regulator.regulate(gañán, moza, minTemp, maxTemp, temperature);
+        /* In the line of code above, it is demonstrated that dependency injection works with 2 different objects
+        with the same interface implementation.
+         */
+
+        System.out.println("Precalentando...");
+        gañán.speak();
+
+        System.out.println("¡Ignición!");
         moza.speak();
     }
 }

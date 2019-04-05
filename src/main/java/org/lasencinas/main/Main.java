@@ -15,19 +15,21 @@ public class Main {
         final double minTemp = 15.0;
         final double maxTemp = 21.0;
 
-        RoomTemperature temperature = RoomTemperature.getRoomTemperature(15);
+        RoomTemperature temperature = RoomTemperature.setRoomTemperature(15);
         Heatable heater = new Heater();
         Temperable thermometer = new Thermometer();
 
         Regulator regulator = new Regulator();
 
         System.out.println("Precalentando...\n");
+        System.out.println(temperature.getTemperature());
         regulator.regulate(thermometer, heater, minTemp, maxTemp, temperature);
 
         System.out.println("¡Ignición!");
 
         Man man = new Man();
         Girl moza = new Girl();
+
         System.out.println("\nEjecución finalizada: ");
         regulator.regulate(man, moza, minTemp, maxTemp, temperature);
         moza.speak();

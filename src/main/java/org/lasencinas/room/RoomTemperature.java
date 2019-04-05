@@ -7,7 +7,8 @@ public class RoomTemperature {
 
 
     /* ---- Constructor ---- */
-    public RoomTemperature() {}
+    public RoomTemperature() {
+    }
 
     public RoomTemperature(double temperature) {
         this.temperature = temperature;

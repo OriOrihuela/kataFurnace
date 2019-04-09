@@ -20,7 +20,7 @@ public class RoomTemperature {
 
 
     /* ---- Behaviours ---- */
-    public static RoomTemperature setRoomTemperature(double temperature) {
+    public static synchronized RoomTemperature setRoomTemperature(double temperature) {
         if (ROOM_TEMPERATURE == null) {
             ROOM_TEMPERATURE = new RoomTemperature(temperature);
         } else {
